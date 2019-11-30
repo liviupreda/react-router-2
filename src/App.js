@@ -10,9 +10,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Food name="Kale" />
-        <Food name="Chicken" />
-        <Food name="Banana" />
+        {/* <Route exact path="/food/:name" component={Food} /> */}
+        <Route
+          exact
+          path="/food/:name"
+          render={routeProps => <Food isAuthenticated="true" {...routeProps} />}
+        />
       </div>
     );
   }
