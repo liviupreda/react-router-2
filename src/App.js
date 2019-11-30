@@ -16,6 +16,7 @@ class App extends Component {
           path="/food/:name"
           render={routeProps => <Food isAuthenticated="true" {...routeProps} />}
         />
+        <Route path="/food/:foodName/drink/:drinkName" component={Meal} />
       </div>
     );
   }

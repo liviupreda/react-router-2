@@ -9,7 +9,7 @@ class Meal extends Component {
     return (
       <div>
         <h1>
-          THIS IS A MEAL OF {foodName} + {drinkName}
+          THIS IS A MEAL of {foodName} + {drinkName}
         </h1>
         <img src={foodUrl} />
         <img src={drinkUrl} />
