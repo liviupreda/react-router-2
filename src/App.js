@@ -11,12 +11,22 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Route exact path="/food/:name" component={Food} /> */}
-        <Route
-          exact
-          path="/food/:name"
-          render={routeProps => <Food isAuthenticated="true" {...routeProps} />}
-        />
-        <Route path="/food/:foodName/drink/:drinkName" component={Meal} />
+        <Switch>
+          <Route
+            exact
+            path="/food/:name"
+            render={routeProps => (
+              <Food isAuthenticated="true" {...routeProps} />
+            )}
+          />
+          <Route
+            exact
+            path="/food/:foodName/drink/:drinkName"
+            component={Meal}
+          />
+          <Route exact path="/" render={() => <h1>HOME PAGE</h1>} />
+          <Route render={() => <h1>ERROR NOT FOUND</h1>} />
+        </Switch>
       </div>
     );
   }
