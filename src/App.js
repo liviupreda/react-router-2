@@ -11,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Route exact path="/food/:name" component={Food} /> */}
+        <Navbar />
         <Switch>
           <Route
             exact
