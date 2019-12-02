@@ -7,6 +7,7 @@ class Food extends Component {
     const url = `https://source.unsplash.com/1600x900/?${name}`;
     return (
       <div className="Food">
+        {/\d/.test(name) && <Redirect to="/" />}
         <h1>I love to eat {name}</h1>
         <img src={url} alt={name} />
       </div>
