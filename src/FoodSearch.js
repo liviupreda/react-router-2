@@ -22,8 +22,8 @@ class FoodSearch extends Component {
       <div>
         <h1>Search For A Food!</h1>
         <input
-          type='text'
-          placeholder='search for a food'
+          type="text"
+          placeholder="search for a food"
           value={this.state.query}
           onChange={this.handleChange}
         />
